@@ -1,0 +1,55 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto', sans-serif; scroll-behavior: smooth; }
+body { background: #050505; color: #fff; overflow-x: hidden; }
+
+/* Sidebar & Header */
+.sidebar { height: 100%; width: 0; position: fixed; z-index: 2000; top: 0; left: 0; background: #0a0a0a; overflow-x: hidden; transition: 0.5s; padding-top: 60px; }
+.sidebar a { padding: 15px 32px; text-decoration: none; font-size: 1.1rem; color: #818181; display: block; }
+.sidebar .closebtn { position: absolute; top: 10px; right: 25px; font-size: 40px; }
+.openbtn { font-size: 20px; cursor: pointer; color: #00f2ff; margin-left: 20px; font-weight: bold; }
+header { position: fixed; top: 0; width: 100%; padding: 15px; display: flex; align-items: center; z-index: 1000; background: rgba(0,0,0,0.9); border-bottom: 1px solid #111; }
+.logo { font-family: 'Orbitron', sans-serif; font-size: 1.4rem; margin-left: 15px; }
+.logo span { color: #00f2ff; text-shadow: 0 0 10px #00f2ff; }
+
+/* Hero */
+.hero { height: 100vh; background: url('https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=2000') center/cover; display: flex; align-items: center; justify-content: center; position: relative; }
+.overlay { position: absolute; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); }
+.hero-content { position: relative; z-index: 10; text-align: center; width: 90%; }
+.glow-text { font-family: 'Orbitron', sans-serif; font-size: 2.5rem; margin-bottom: 10px; }
+.glow-text span { color: #ff3c00; text-shadow: 0 0 15px #ff3c00; }
+.subtitle { color: #00f2ff; letter-spacing: 3px; font-weight: bold; margin-bottom: 40px; }
+
+/* Botões */
+.emergency-selector { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
+.neon-btn { width: 140px; height: 140px; border: 2px solid #fff; border-radius: 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer; transition: 0.3s; }
+.blue { border-color: #00f2ff; color: #00f2ff; box-shadow: 0 0 10px #00f2ff; }
+.orange { border-color: #ff3c00; color: #ff3c00; box-shadow: 0 0 10px #ff3c00; }
+.green { border-color: #39ff14; color: #39ff14; box-shadow: 0 0 10px #39ff14; }
+.icon-box { font-size: 2rem; margin-bottom: 10px; }
+
+/* Galeria */
+.gallery-section { padding: 80px 5%; text-align: center; }
+.section-title { font-family: 'Orbitron', sans-serif; margin-bottom: 40px; font-size: 1.5rem; }
+.section-title span { color: #00f2ff; }
+.gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; }
+.gallery-item { border-radius: 15px; overflow: hidden; position: relative; border: 1px solid #222; height: 200px; }
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; }
+.gallery-desc { position: absolute; bottom: 0; width: 100%; background: rgba(0,242,255,0.8); color: #000; font-size: 12px; font-weight: bold; padding: 5px; }
+
+/* Localização */
+.location-section { padding: 60px 5%; background: #080808; }
+.location-info { background: #111; padding: 20px; border-radius: 15px; margin-bottom: 20px; }
+.city-list { list-style: none; margin-top: 10px; line-height: 2; }
+.map-box { filter: invert(90%) hue-rotate(180deg); }
+
+/* Footer & Status */
+.main-footer { padding: 40px 5% 100px; text-align: center; border-top: 1px solid #111; }
+.status-badge { display: inline-flex; align-items: center; padding: 8px 15px; border-radius: 20px; margin-bottom: 15px; font-weight: bold; font-size: 0.8rem; }
+.status-open { background: rgba(57,255,20,0.1); color: #39ff14; border: 1px solid #39ff14; }
+.status-closed { background: rgba(255,60,0,0.1); color: #ff3c00; border: 1px solid #ff3c00; }
+.dot { height: 8px; width: 8px; border-radius: 50%; margin-right: 8px; background: currentColor; }
+
+/* WhatsApp */
+.whatsapp-float { position: fixed; bottom: 20px; right: 20px; background: #25d366; padding: 12px 20px; border-radius: 50px; display: flex; align-items: center; color: #fff; font-weight: bold; text-decoration: none; z-index: 3000; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
+.whatsapp-float img { width: 20px; margin-right: 10px; }
+
+@media (max-width: 600px) { .neon-btn { width: 100%; height: 70px; flex-direction: row; gap: 15px; } }
