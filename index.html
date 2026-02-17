@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S.O.S ENCANADOR | Itabuna-BA</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#home" onclick="closeNav()">INÍCIO</a>
+        <a href="#galeria" onclick="closeNav()">📸 GALERIA DE FOTOS</a>
+        <a href="#locais" onclick="closeNav()">📍 ONDE ATENDEMOS</a>
+        <hr style="border: 0.5px solid #333; margin: 20px;">
+        <p style="color:#555; font-size: 10px; padding: 0 32px;">EMERGÊNCIA:</p>
+        <a href="javascript:void(0)" onclick="solicitarServico('Vazamento')">💧 VAZAMENTO</a>
+        <a href="javascript:void(0)" onclick="solicitarServico('Entupimento')">🚫 ENTUPIMENTO</a>
+        <a href="javascript:void(0)" onclick="solicitarServico('Reparo')">🛠️ REPARO</a>
+    </div>
+
+    <header>
+        <span class="openbtn" onclick="openNav()">&#9776; MENU</span>
+        <div class="logo">S.O.S <span>ENCANADOR</span></div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1 class="glow-text">ENCANADOR <span>24H</span></h1>
+            <p class="subtitle">ITABUNA E REGIÃO</p>
+
+            <div class="emergency-selector">
+                <div class="neon-btn blue" onclick="solicitarServico('Vazamento')">
+                    <div class="icon-box">💧</div><span>VAZAMENTO</span>
+                </div>
+                <div class="neon-btn orange" onclick="solicitarServico('Entupimento')">
+                    <div class="icon-box">🚫</div><span>ENTUPIMENTO</span>
+                </div>
+                <div class="neon-btn green" onclick="solicitarServico('Reparo')">
+                    <div class="icon-box">🛠️</div><span>REPARO</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="galeria" class="gallery-section">
+        <h2 class="section-title">SERVIÇOS <span>EXECUTADOS</span></h2>
+        <div class="gallery-grid">
+            <div class="gallery-item"><img src="foto1.jpg" alt="Serviço 1"><div class="gallery-desc">Reparo de Vazamento</div></div>
+            <div class="gallery-item"><img src="foto2.jpg" alt="Serviço 2"><div class="gallery-desc">Manutenção de Pias</div></div>
+            <div class="gallery-item"><img src="foto3.jpg" alt="Serviço 3"><div class="gallery-desc">Desentupimento</div></div>
+            <div class="gallery-item"><img src="foto4.jpg" alt="Serviço 4"><div class="gallery-desc">Instalações</div></div>
+        </div>
+    </section>
+
+    <section id="locais" class="location-section">
+        <h2 class="section-title">ONDE <span>ATENDEMOS</span></h2>
+        <div class="location-container">
+            <div class="location-info">
+                <h3>Sede em Itabuna - BA</h3>
+                <ul class="city-list">
+                    <li>✅ Centro e Bairros de Itabuna</li>
+                    <li>✅ Ferradas / Nova Itabuna</li>
+                    <li>✅ Região de Ilhéus (Consulte)</li>
+                </ul>
+            </div>
+            <div class="map-box">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d61856.84880918739!2d-39.3134371!3d-14.7937929!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x739097740404a2f1%3A0x92927293771f2b67!2sItabuna%2C%20BA!5e0!3m2!1spt-BR!2sbr!4v1708100000000!5m2!1spt-BR!2sbr" 
+                width="100%" height="300" style="border:0; border-radius: 15px;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div id="status-indicator" class="status-badge">
+            <span class="dot"></span> <span id="status-text">VERIFICANDO...</span>
+        </div>
+        <div class="schedule-box">
+            <h3>🕒 HORÁRIOS</h3>
+            <p><strong>Seg a Sex:</strong> 08:00 às 17:00</p>
+            <p><strong>Sáb e Dom:</strong> 10:00 às 15:00</p>
+        </div>
+        <p style="margin-top: 20px; color: #444;">&copy; 2026 S.O.S Encanador - Itabuna/BA</p>
+    </footer>
+
+    <a href="https://wa.me/5573988478170" class="whatsapp-float" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Zap">
+        <span>ATENDIMENTO 24H</span>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
